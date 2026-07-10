@@ -1,5 +1,5 @@
-let patidasVencidas = 9
-let partidasPerdidas 
+let patidasVencidas = 1
+let partidasPerdidas = ""
 let rank
 let saldoDeVitorias = visualizarPartidas(patidasVencidas , partidasPerdidas)
 
@@ -8,7 +8,7 @@ function visualizarPartidas(vitorias , derrotas = 0) {
     return resultado
 }
 
-while(saldoDeVitorias <= 110) {
+do {
 
     switch(true) {
         case saldoDeVitorias <= 10:
@@ -36,6 +36,7 @@ while(saldoDeVitorias <= 110) {
 
     console.log(`O Herói tem um saldo de ${saldoDeVitorias} vitórias e está no rank : ${rank}`)
     saldoDeVitorias += 10
-}
+
+} while(rank !== "Imortal")
 
 console.log("Achei fácil, como sai do tutorial?")
